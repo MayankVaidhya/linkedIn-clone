@@ -36,7 +36,7 @@ const Post = ({ post }: { post: IPostDocument }) => {
         <div>
           {loggedInUser && (
             <Button
-              onClick={() => deletePostAction(post._id)}
+              onClick={() => deletePostAction(post._id as string)}
               className="rounded-full"
               size={"icon"}
               variant={"outline"}
