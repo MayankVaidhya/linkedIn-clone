@@ -6,7 +6,7 @@ const Posts = ({ posts }: { posts: IPostDocument[] }) => {
   return (
     <div>
       {posts?.map((post) => {
-        return <Post key={post._id} post={post} />;
+        return <Post key={post._id as string} post={post} />;
       })}
     </div>
   );
