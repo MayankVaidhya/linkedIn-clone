@@ -26,7 +26,10 @@ const Post = ({ post }: { post: IPostDocument }) => {
               {fullName} <Badge variant={"secondary"}>You</Badge>
             </h1>
             <p className="text-xs text-gray-500">
-              @{user ? user?.user?.username : "username"}
+              @
+              {user
+                ? `${user?.user?.firstName}${user?.user?.lastName}`.toLowerCase()
+                : "username"}
             </p>
             <p className="text-xs text-gray-500">
               <ReactTimeago date={new Date(post.createdAt)} />
